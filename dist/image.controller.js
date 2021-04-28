@@ -83,7 +83,7 @@ var uploadImage = function (req, res) {
             image_model_1.default.insertMany(images)
                 .then(function (docs) {
                 var imageURLs = docs.map(function (doc) {
-                    return { url: "http:localhost:8000/" + doc._id, name: doc.originalName };
+                    return { url: "https://imagesuploadkk.herokuapp.com/" + doc._id, name: doc.originalName };
                 });
                 console.log(docs);
                 res.status(201).json({
